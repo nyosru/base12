@@ -1,0 +1,13 @@
+{
+    "name": "Job",
+    "alias": "job",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "App\\Modules\\Job\\Providers\\JobServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

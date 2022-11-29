@@ -1,0 +1,3 @@
+<?php $__currentLoopData = $tmf_reg_queue_root_status_objs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tmf_reg_queue_root_status_obj): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+    <option value="<?php echo e($tmf_reg_queue_root_status_obj->id); ?>"><?php echo e($tmf_reg_queue_root_status_obj->name); ?></option>
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php /**PATH /var/www/html/in.trademarkfactory.com/resources/views/tmf-reg-queue-status-maintainer/root-status-options.blade.php ENDPATH**/ ?>

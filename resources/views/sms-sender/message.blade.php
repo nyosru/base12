@@ -1,0 +1,1 @@
+<textarea id="sms-text" class="form-control" rows="5" style="resize: vertical">{{$tmf_subject->first_name}}, we just sent you an email to {{$tmf_subject_contact_email->contact}} that requires your prompt response. Trademark Factory.</textarea>

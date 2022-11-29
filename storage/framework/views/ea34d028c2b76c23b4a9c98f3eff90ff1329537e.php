@@ -1,0 +1,1 @@
+<li><a class="dropdown-item <?php echo e($classname); ?>" href="https://trademarkfactory.com/searchreport/<?php echo e($tmoffer_login); ?>&donttrack=donttrack" target="_blank"><?php echo $icon; ?> <?php echo e($caption); ?></a></li><?php /**PATH /var/www/html/in.trademarkfactory.com/app/Modules/TMFXQ/Resources/views/context-menu/view-in-search-report-item.blade.php ENDPATH**/ ?>

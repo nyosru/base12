@@ -1,0 +1,5 @@
+<?php if($email_vars->save_with_pay_in_full>=50 && $email_vars->next_installment<$email_vars->total_installments): ?>
+<p>Alternatively, you can <a href="https://trademarkfactory.com/expedited-payment/<?php echo e($tmoffer->Login); ?>" target="_blank">save $<?php echo e($email_vars->save_with_pay_in_full); ?> if you consolidate the remaining <?php echo e($email_vars->payments_remaining); ?> payments of $<?php echo e($request->amount); ?> into a single payment of $<?php echo e($email_vars->expedited_pay_in_full); ?></a>.</p>
+<p>If you choose this option, we will cancel your recurring invoices upon receipt of the expedited payment.</p>
+<?php endif; ?>
+<p>Either way, thank you for taking care of this at your earliest convenience.</p><?php /**PATH /var/www/html/in.trademarkfactory.com/resources/views/payments-calendar/failed-payment-email-body-common.blade.php ENDPATH**/ ?>

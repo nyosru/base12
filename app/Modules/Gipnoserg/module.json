@@ -1,0 +1,13 @@
+{
+    "name": "Gipnoserg",
+    "alias": "gipnoserg",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "App\\Modules\\Gipnoserg\\Providers\\GipnosergServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

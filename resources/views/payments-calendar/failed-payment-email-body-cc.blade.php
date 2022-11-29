@@ -1,0 +1,4 @@
+<p>We just got a notification that your recurring credit card payment of {{$request->selected_currency}} ${{$request->amount}} for our trademarking services has failed.</p>
+<p>We get it: these things happen to the best of us.</p>
+<p>Please let us know when we can retry the payment or, if your old card is no longer functional, please <a href="https://trademarkfactory.com/package-view-invoice?login={{$tmoffer->Login}}&code={{$tmoffer->ConfirmationCode}}&installment={{$request->paid_index+1}}" target="_blank">click here</a> to make your monthly payment.</p>
+<p>You can also use the attached invoice, if it is more convenient for you.</p>

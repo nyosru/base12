@@ -1,0 +1,51 @@
+// $transparent: rgba(255, 255, 255, 0);
+
+$color-bg-point: transparentize(#888888, 0.5);
+$color-bg-line: transparentize(#a4a4a4, 0.5);
+$color-bg-body: #ffffff;
+
+// $color-1: transparentize(#ffefc3, 0.6);
+// $size: 7em;
+// $big-size: $size * 2;
+// $bgcolor: rgba(0,0,0,0.7);
+body {
+
+    background:
+
+        radial-gradient($color-bg-point 3px, transparent 4px),
+        radial-gradient($color-bg-point 3px, transparent 4px),
+        linear-gradient($color-bg-body 4px, transparent 0),
+
+        linear-gradient(
+            45deg,
+            transparent 74px,
+            transparent 75px,
+            $color-bg-line 75px,
+            $color-bg-line 76px,
+            transparent 77px,
+            transparent 109px
+        ),
+
+        linear-gradient(
+            -45deg,
+            transparent 75px,
+            transparent 76px,
+            $color-bg-line 76px,
+            $color-bg-line 77px,
+            transparent 78px,
+            transparent 109px
+        ),
+
+        $color-bg-body;
+    background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px,
+        109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+}
+
+.carusel_item {
+    height: 40vh;
+    min-height: 350px;
+    max-height: 450px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}

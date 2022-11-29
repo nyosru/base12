@@ -1,0 +1,1 @@
+<li><a class="dropdown-item <?php echo e($classname); ?>" href="https://trademarkfactory.com/mlcclients/tmfentry/<?php echo e($tmoffer_login); ?>?show=searchresults" target="_blank"><?php echo $icon; ?> <?php echo e($caption); ?></a></li><?php /**PATH /var/www/html/in.trademarkfactory.com/app/Modules/TMFXQ/Resources/views/context-menu/tmfentry-item.blade.php ENDPATH**/ ?>

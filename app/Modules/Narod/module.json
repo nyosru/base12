@@ -1,0 +1,13 @@
+{
+    "name": "Narod",
+    "alias": "narod",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "App\\Modules\\Narod\\Providers\\NarodServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

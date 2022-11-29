@@ -1,0 +1,13 @@
+{
+    "name": "Billiard",
+    "alias": "billiard",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "App\\Modules\\Billiard\\Providers\\BilliardServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

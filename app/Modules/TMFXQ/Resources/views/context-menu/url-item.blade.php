@@ -1,0 +1,1 @@
+<li><a class="dropdown-item" href="{{$url}}" target="_blank">{!! $icon !!} {{$caption}}</a></li>

@@ -1,0 +1,13 @@
+{
+    "name": "Rem7",
+    "alias": "rem7",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "App\\Modules\\Rem7\\Providers\\Rem7ServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

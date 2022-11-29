@@ -1,0 +1,13 @@
+{
+    "name": "Buh",
+    "alias": "buh",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "App\\Modules\\Buh\\Providers\\BuhServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

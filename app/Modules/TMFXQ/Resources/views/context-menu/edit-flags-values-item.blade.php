@@ -1,0 +1,1 @@
+<li><a class="dropdown-item {{$classname}}" data-dashboard-id="{{$dashboard_id}}" data-queue-status-id="{{$queue_status_id}}" data-danger-at="{{$danger_at}}" data-warning-at="{{$warning_at}}" href="#">{!! $icon !!} {{$caption}}</a></li>

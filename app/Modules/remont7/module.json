@@ -1,0 +1,13 @@
+{
+    "name": "Kadastr",
+    "alias": "kadastr",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "App\\Modules\\Kadastr\\Providers\\KadastrServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

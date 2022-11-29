@@ -1,0 +1,13 @@
+{
+    "name": "TMFXQ",
+    "alias": "tmfxq",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "App\\Modules\\TMFXQ\\Providers\\TMFXQServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

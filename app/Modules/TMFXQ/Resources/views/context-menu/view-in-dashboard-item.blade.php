@@ -1,0 +1,1 @@
+<li><a class="dropdown-item {{$classname}}" href="https://trademarkfactory.com/mlcclients/dashboard-trademarks-details.php?id={{$dashboard_id}}" target="_blank">{!! $icon !!} {{$caption}}</a></li>

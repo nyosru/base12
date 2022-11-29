@@ -1,0 +1,1 @@
+<li><a class="dropdown-item {{$classname}}" href="https://trademarkfactory.com/searchreport/{{$tmoffer_login}}&donttrack=donttrack" target="_blank">{!! $icon !!} {{$caption}}</a></li>

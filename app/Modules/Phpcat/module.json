@@ -1,0 +1,13 @@
+{
+    "name": "Phpcat",
+    "alias": "phpcat",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "App\\Modules\\Phpcat\\Providers\\PhpcatServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

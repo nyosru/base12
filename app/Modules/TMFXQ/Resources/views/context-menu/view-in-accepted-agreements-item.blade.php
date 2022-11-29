@@ -1,0 +1,1 @@
+<li><a class="dropdown-item {{$classname}}" href="https://trademarkfactory.com/mlcclients/acceptedagreements.php?login={{$tmoffer_login}}&sbname=&sbphone=&sbtm=&sbemail=&sbnote=&date_from=&date_to=&affiliate_camefrom=&sort_by=new_logins_first&show=ALL&sbmt_btn=SEARCH&page=1" target="_blank">{!! $icon !!} {{$caption}}</a></li>

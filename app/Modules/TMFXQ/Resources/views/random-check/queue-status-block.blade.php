@@ -1,0 +1,1 @@
+{{$queue_status_data->type_name}} > {{$queue_status_data->queueRootStatus->name}} > <strong>{{$queue_status_data->name}}</strong>

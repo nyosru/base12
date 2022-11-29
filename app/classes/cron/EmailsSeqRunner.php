@@ -1,0 +1,135 @@
+<?php
+namespace App\classes\cron;
+
+
+use App\classes\emseq\TemplateTranslator;
+use App\EmailsSeq;
+use App\Mail\OutreachEmail1Sent;
+use App\TmfBooking;
+use App\TmfClientTmsrTmoffer;
+use App\Tmfsales;
+use App\TmfSubjectContact;
+use App\Tmoffer;
+use App\TmofferCompanySubject;
+use Ghattrell\ActiveCampaign\Facades\ActiveCampaign;
+use Illuminate\Support\Facades\Mail;
+
+class EmailsSeqRunner
+{
+    public function __invoke()
+    {
+        $date = new \DateTime();
+        $objs=$this->getData($date);
+//        dd($objs);
+        $andrei = Tmfsales::find(1);
+        $signature=sprintf('<br/>%s<br/>%s<br/>%s',
+            $andrei->goodbye_text,
+            $andrei->FirstName,
+            $this->getSignature($andrei));
+
+        foreach ($objs as $obj){
+            $tmf_subject=$obj->tmfSubject;
+            $tmf_subject_contact=TmfSubjectContact::where('tmf_subject_id',$tmf_subject->id)
+                ->where('contact_data_type_id',1)
+                ->first();
+//            dd($obj);
+            if($obj->emailsSeqTemplate->code!='Drip') {
+                $data = [
+                    'subj' => $obj->emailsSeqTemplate->subj,
+                    'body' => (new TemplateTranslator($obj))->get() . $signature,
+                    'firstname' => $tmf_subject->first_name,
+                    'email' => $tmf_subject_contact->contact,
+                    'from' => $andrei
+                ];
+                $this->sendEmail($data, $andrei);
+            }else{
+                $email=$tmf_subject_contact->contact;
+                $firstname=$tmf_subject->first_name;
+                $contact = array(
+                    "email" => $email,
+                    "first_name" => $firstname,
+                    "last_name" => '',
+                    "p[2]" => 2,
+                    "status[2]" => 1, // "Active" status
+                );
+                ActiveCampaign::contactSync($contact);
+            }
+            $obj->sent_at = (new \DateTime())->format('Y-m-d H:i:s');
+            $obj->save();
+        }
+    }
+
+    private function getSignature(Tmfsales $tmfsales)
+    {
+        $arrContextOptions = array(
+            "ssl" => array(
+                "verify_peer" => false,
+                "verify_peer_name" => false,
+            ),
+        );
+        $signature_link = 'https://trademarkfactory.com/signatureall_new.php?id=' . $tmfsales->ID;
+        return file_get_contents(
+            $signature_link,
+            false,
+            stream_context_create($arrContextOptions)
+        );
+    }
+
+
+    private function sendEmail($data,$andrei){
+        Mail::to([['email' => $data['email'], 'name' => $data['firstname']]])
+//            ->cc($andrei->Email, $andrei->FirstName . ' ' . $andrei->LastName)
+            ->send(new OutreachEmail1Sent($data['from']->Email,'Trademark Factory® | '.$data['from']->FirstName.' '.$data['from']->LastName,
+                    $data['subj'],
+                    $data['body'])
+            );
+    }
+
+    private function getData($date){
+        $result=[];
+        $objs=EmailsSeq::where('scheduled_at','like','%'.$date->format('Y-m-d H:i').'%')
+            ->whereNotIn('emails_seq_template_id',[1,7])
+            ->get();
+//        dd($objs);
+        $used_email_seq_ids=[];
+        foreach ($objs as $obj){
+            $tmoffers=$this->getTmoffers($obj->tmf_subject_id);
+            if($tmoffers && count($tmoffers)) {
+
+                foreach ($tmoffers as $tmoffer) {
+                    if (!$this->tmofferHasBooking($tmoffer->ID) &&
+                        !$this->isTmofferConfirmed($tmoffer) &&
+                        !in_array($obj->id,$used_email_seq_ids)
+                    ){
+                        $result[] = $obj;
+                        $used_email_seq_ids[]=$obj->id;
+                    }
+                }
+            }
+            elseif(!in_array($obj->id,$used_email_seq_ids)) {
+                    $result[] = $obj;
+                    $used_email_seq_ids[]=$obj->id;
+                }
+        }
+//        dd($result);
+        return $result;
+    }
+
+    private function getTmoffers($tmf_subject_id){
+        return Tmoffer::whereIn('ID',TmofferCompanySubject::select('tmoffer_id')
+            ->where('tmf_subject_id',$tmf_subject_id)
+        )->get();
+    }
+
+    private function tmofferHasBooking($tmoffer_id){
+        return TmfBooking::whereIn(
+            'tmf_client_tmsr_tmoffer_id',
+            TmfClientTmsrTmoffer::select('id')->where('tmoffer_id',$tmoffer_id)
+            )
+            ->first();
+    }
+
+    private function isTmofferConfirmed($tmoffer){
+        return $tmoffer->DateConfirmed!='0000-00-00';
+    }
+}

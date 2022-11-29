@@ -1,0 +1,3 @@
+<?php $__currentLoopData = $dashboard_tss_template_objs; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $dashboard_tss_template_obj): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+    <option value="<?php echo e($dashboard_tss_template_obj->id); ?>"><?php echo e($dashboard_tss_template_obj->template_name); ?></option>
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php /**PATH /var/www/html/in.trademarkfactory.com/resources/views/common-queue/tss-options.blade.php ENDPATH**/ ?>

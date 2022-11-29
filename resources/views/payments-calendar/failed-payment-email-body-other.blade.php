@@ -1,0 +1,3 @@
+<p>This is to let you know that we have not received your payment of {{$request->selected_currency}} ${{$request->amount}} for our trademarking services scheduled for {{(new \DateTime($email_vars->payment_date))->format('F j, Y')}}.</p>
+<p>We get it: these things happen to the best of us.</p>
+<p>Please <a href="https://trademarkfactory.com/package-view-invoice?login={{$tmoffer->Login}}&code={{$tmoffer->ConfirmationCode}}&installment={{$request->paid_index+1}}" target="_blank">click here</a> to pay with a credit card or PayPal or use the attached invoice to see what other methods of payment are available to you.</p>

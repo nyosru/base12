@@ -1,0 +1,13 @@
+{
+    "name": "Metrika",
+    "alias": "metrika",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "App\\Modules\\Metrika\\Providers\\MetrikaServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

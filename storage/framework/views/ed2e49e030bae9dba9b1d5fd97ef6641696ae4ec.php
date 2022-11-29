@@ -1,0 +1,1 @@
+<li><a class="dropdown-item <?php echo e($classname); ?>" href="<?php echo e($agency_url); ?>" target="_blank"><?php echo $icon; ?> <?php echo e($caption); ?></a></li><?php /**PATH /var/www/html/in.trademarkfactory.com/app/Modules/TMFXQ/Resources/views/context-menu/view-tm-office-page-item.blade.php ENDPATH**/ ?>
