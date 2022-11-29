@@ -6,6 +6,13 @@ import { createRouter, createWebHistory } from "vue-router";
 require("./bootstrap");
 import 'bootstrap';
 
+
+
+
+
+
+
+
 import Vitrin from './Components/Vitrin.vue';
 import VitrinTrebs from './Components/VitrinTrebs/BodyComponent.vue';
 import VitrinBalance from './Components/VitrinBalance/BodyComponent.vue';
