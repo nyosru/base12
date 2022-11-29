@@ -11,9 +11,7 @@ import VitrinTrebs from './Components/VitrinTrebs/BodyComponent.vue';
 import VitrinBalance from './Components/VitrinBalance/BodyComponent.vue';
 import VitrinParticipation from './Components/VitrinParticipation/BodyComponent.vue';
 import formReg from './Components/formReg.vue';
-
 import PageText from './Components/PageText.vue';
-
 
 const routes = [
 
@@ -22,8 +20,8 @@ const routes = [
         name: "about",
         components: {
             bodyContent: PageText
-        }
-        , meta: { page: 'about' }
+        },
+        meta: { page: 'about' }
     },
     {
         path: "/index",
@@ -37,8 +35,8 @@ const routes = [
         name: "formReg",
         components: {
             bodyContent: formReg
-        }
-        , meta: { page: 'formReg' }
+        },
+        meta: { page: 'formReg' }
 
     },
     {
@@ -46,8 +44,8 @@ const routes = [
         name: "pageDocuments",
         components: {
             bodyContent: PageText
-        }
-        , meta: { page: 'documents' }
+        },
+        meta: { page: 'documents' }
     },
 
     {
@@ -55,8 +53,8 @@ const routes = [
         name: "pageTrebs",
         components: {
             bodyContent: VitrinTrebs
-        }
-        , meta: { page: 'trebs' }
+        },
+        meta: { page: 'trebs' }
     },
 
     {
@@ -64,8 +62,8 @@ const routes = [
         name: "balance",
         components: {
             bodyContent: VitrinBalance
-        }
-        , meta: { page: 'balance' }
+        },
+        meta: { page: 'balance' }
     },
 
     {
@@ -73,8 +71,8 @@ const routes = [
         name: "contacts",
         components: {
             bodyContent: PageText
-        }
-        , meta: { page: 'contacts' }
+        },
+        meta: { page: 'contacts' }
     },
 
 
@@ -83,8 +81,8 @@ const routes = [
         name: "participation",
         components: {
             bodyContent: VitrinParticipation
-        }
-        , meta: { page: 'participation' }
+        },
+        meta: { page: 'participation' }
     },
 
 
