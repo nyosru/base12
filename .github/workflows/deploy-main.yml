@@ -54,7 +54,8 @@ jobs:
             cd www
             cd ${{ secrets.FOLDER_DEV }}
             npm i
-            npm run prod
+            npm run dev
+          # npm run prod
           # script: cd www && cd ${{ secrets.FOLDER }} && npm i && npm run dev
 
       - name: send telega
