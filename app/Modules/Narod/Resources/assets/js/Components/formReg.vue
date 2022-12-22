@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <!-- <div class="main"> -->
     <!-- PageText
     <br />-->
     <!-- <br />
@@ -8,9 +8,10 @@
     <br />
     pageData: {{ pageData }} -->
 
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
+    <!-- <div class="container"> -->
+      <!-- <div class="row"> -->
+        <!-- <div class="col-12 text-center"> -->
+
           <h3 class="mt-3 mb-3">Заявка на участие</h3>
 
           <div class="btn-group" role="group" aria-label="docs">
@@ -48,19 +49,19 @@
               Анкета Юр.лицо
             </button>
           </div>
-        </div>
-      </div>
+        <!-- </div> -->
+      <!-- </div> -->
 
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-8">
+      <!-- <div class="row justify-content-center"> -->
+        <!-- <div class="col-12 col-md-8"> -->
           <!-- showForm {{ showForm }} -->          
           <form-fast v-if="showForm == 'fast'"></form-fast>
           <form-fiz v-else-if="showForm == 'fiz'"></form-fiz>
           <form-ur v-else-if="showForm == 'ur'"></form-ur>
-        </div>
-      </div>
-    </div>
-  </div>
+        <!-- </div> -->
+      <!-- </div> -->
+    <!-- </div> -->
+  <!-- </div> -->
 </template>
 
 <script>

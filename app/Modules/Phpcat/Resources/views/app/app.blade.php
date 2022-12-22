@@ -110,18 +110,91 @@ https://templatemo.com/tm-562-space-dynamic
                     <photos />
                 </div>
                 <div class="col-12 col-md-6">
+
+<style>
+                    @import url(https://fonts.googleapis.com/css?family=Roboto);
+
+                    @import url(https://fonts.googleapis.com/css?family=Festive);
+                    
+                    body {
+                      padding: 0;
+                      margin: 0;
+                      height: 50vh;
+                      display: grid;
+                      place-items: center;
+                      overflow: hidden;
+                      background-color: black;
+                    }
+                    
+                    .conteiner {
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      flex-direction: column;
+                    }
+                    
+                    h1 {
+                      font-size: 15rem;
+                      font-family: "Roboto";
+                      font-weight: 900;
+                      background-image: url(https://c.tenor.com/7k2yASJxRuEAAAAM/stars-twinkling.gif);
+                      -webkit-background-clip: text;
+                      -webkit-text-fill-color: transparent;
+                    
+                    }
+                    
+                    h2 {
+                      font-family: "Festive";
+                      font-size: 3rem;
+                      position: relative;
+                      bottom: 230px;
+                      background:linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+                      -webkit-background-clip: text;
+                      -webkit-text-fill-color: transparent;
+                    }
+                    
+                    @media only screen and (max-width: 600px) {
+                      h1 {
+                        font-size: 11rem;
+                      }
+                      
+                      h2 {
+                        font-size: 2rem;
+                        position: relative;
+                        bottom: 160px;
+                      }
+                    }
+                    
+                    
+                </style>                    
+
+
+
+<div class="conteiner">
+    <h1>2022</h1>
+    <h2>HAPPY NEW YEAR</h2>
+    </div>
+    
+
+    
+    
                     <h2 class="alert alert-warning text-center">
+
+
+
+
                         {{ date('Y') }}&nbsp;год самое&nbsp;время реализовать вашу&nbsp;идею!
                     </h2>
                     <p class="text-center" >
                         Я&nbsp;Сергей&nbsp;Бакланов 
                         <br/>
                         <br/>
-                        IT архитектор, тим/тех&nbsp;лид, помогаю управлять и&nbsp;вести группу(ы) программистов (тестеров, дизайнеров, верстальщиков), 
-                        выстраивание командной работы, контроль качества и&nbsp;защита от&nbsp;форс мажоров,                        
+                        Програмист, IT архитектор
+                        <br/>
+                        <br/>
+                        Набираюсь опыта и учусь быть норм тим/тех&nbsp;лидом, помогать вести группу(ы) IT специалистов (тестеров, программисты, дизайнеров, верстальщиков), контроль качества и&nbsp;защита от&nbsp;форс мажоров,                        
                         <br />
-                        <br />
-                        Цель работы: выстраивание саморазвивающейся и&nbsp;обоюдно заинтересованной команды разработки/поддержки
+                        Команда 3-7 человек было бы самое то, буду признателен если поможете найти такой вид деятельности
                         <br />
                         <br />
                         Работаю удалённо, нахожусь&nbsp;в&nbsp;Тюмени
